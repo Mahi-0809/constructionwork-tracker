@@ -1,0 +1,28 @@
+# Node.js dependencies
+node_modules/
+
+# Environment files
+.env
+.env.local
+
+# Build files and generated directories
+dist/
+build/
+client/build/ # If your React client is built into a 'build' folder within a 'client' directory
+
+# IDE-specific files (examples)
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Log files
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Local development files (examples)
+*.local
+coverage/ # If you're running tests and generating coverage reports
