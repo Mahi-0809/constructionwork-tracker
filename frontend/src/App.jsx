@@ -1,35 +1,40 @@
-// Import React (needed in every component file)
-import React from 'react';
-
-// Import our layout components
+import React, { useState } from 'react';
+import { AuthProvider, useAuth } from './context/AuthContext';
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
-
-// Import the Dashboard page
 import Dashboard from './pages/Dashboard/Dashboard';
-
-// Import App-level styles
+import Login from './pages/Login/Login';
+import Signup from './pages/Signup/Signup';
 import './App.css';
 
-function App() {
+function AppContent() {
+  const { user } = useAuth();
+  const [showSignup, setShowSignup] = useState(false);
+
+  if (!user) {
+    return showSignup
+      ? <Signup onSwitchToLogin={() => setShowSignup(false)} />
+      : <Login onSwitchToSignup={() => setShowSignup(true)} />;
+  }
+
   return (
-    // Outermost wrapper for the whole app
     <div className="app-wrapper">
-
-      {/* Top navigation bar — spans full width */}
       <Navbar />
-
-      {/* Below navbar: sidebar + main content side by side */}
       <div className="app-body">
         <Sidebar />
-
-        {/* Main content area — this is where pages will load */}
         <main className="main-content">
           <Dashboard />
         </main>
       </div>
-
     </div>
+  );
+}
+
+function App() {
+  return (
+    <AuthProvider>
+      <AppContent />
+    </AuthProvider>
   );
 }
 

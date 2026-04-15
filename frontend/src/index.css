@@ -1,18 +1,15 @@
-/* Remove default margin/padding from all elements */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* padding won't push elements outside their width */
+  box-sizing: border-box;
 }
 
-/* Set a base font and background for the whole app */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f5f7;
   color: #333;
 }
 
-/* Make sure the app fills the full viewport height */
 #root {
   min-height: 100vh;
   display: flex;

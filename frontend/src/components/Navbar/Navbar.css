@@ -6,7 +6,6 @@
   color: #ffffff;
   padding: 0 24px;
   height: 60px;
-  /* Stick navbar to top when scrolling */
   position: sticky;
   top: 0;
   z-index: 100;
@@ -30,7 +29,6 @@
   color: #ccc;
 }
 
-/* Circle avatar with initials */
 .navbar-avatar {
   width: 36px;
   height: 36px;
@@ -42,4 +40,21 @@
   font-weight: 700;
   font-size: 0.85rem;
   cursor: pointer;
+}
+
+.logout-btn {
+  background: transparent;
+  border: 1.5px solid #e94560;
+  color: #e94560;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: #e94560;
+  color: white;
 }

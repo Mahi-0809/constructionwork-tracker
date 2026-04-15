@@ -15,7 +15,6 @@
   font-size: 0.95rem;
 }
 
-/* 4 equal columns that collapse on smaller screens */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -37,10 +36,6 @@
   width: 52px;
   height: 52px;
   border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
   flex-shrink: 0;
 }
 
