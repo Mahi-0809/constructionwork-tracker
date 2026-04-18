@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Sidebar.css';
 
 const navItems = [
@@ -11,17 +11,16 @@ const navItems = [
   { label: 'Reports' },
 ];
 
-function Sidebar() {
-  const [activeItem, setActiveItem] = useState('Dashboard');
-
+// Accept activePage and setActivePage as props from App.jsx
+function Sidebar({ activePage, setActivePage }) {
   return (
     <aside className="sidebar">
       <ul className="sidebar-nav">
         {navItems.map((item) => (
           <li
             key={item.label}
-            className={`sidebar-item ${activeItem === item.label ? 'active' : ''}`}
-            onClick={() => setActiveItem(item.label)}
+            className={`sidebar-item ${activePage === item.label ? 'active' : ''}`}
+            onClick={() => setActivePage(item.label)}
           >
             <span className="sidebar-label">{item.label}</span>
           </li>

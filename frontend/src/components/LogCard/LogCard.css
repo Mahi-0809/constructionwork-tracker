@@ -1,0 +1,86 @@
+.log-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.log-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.log-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+.log-card-date {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Status badge */
+.log-status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.log-status.draft {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.log-status.submitted {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.log-status.approved {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.log-card-desc {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.log-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.log-location {
+  font-size: 0.82rem;
+  color: #888;
+}
+
+.log-delete-btn {
+  background: transparent;
+  border: 1.5px solid #f44336;
+  color: #f44336;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.log-delete-btn:hover {
+  background-color: #f44336;
+  color: white;
+}

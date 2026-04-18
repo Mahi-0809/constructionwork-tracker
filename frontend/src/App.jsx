@@ -3,6 +3,7 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
 import Dashboard from './pages/Dashboard/Dashboard';
+import DailyLogs from './pages/DailyLogs/DailyLogs';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
 import './App.css';
@@ -11,19 +12,32 @@ function AppContent() {
   const { user } = useAuth();
   const [showSignup, setShowSignup] = useState(false);
 
+  // Track which page is currently active
+  const [activePage, setActivePage] = useState('Dashboard');
+
   if (!user) {
     return showSignup
       ? <Signup onSwitchToLogin={() => setShowSignup(false)} />
       : <Login onSwitchToSignup={() => setShowSignup(true)} />;
   }
 
+  // Render the correct page based on activePage
+  const renderPage = () => {
+    switch (activePage) {
+      case 'Dashboard':   return <Dashboard />;
+      case 'Daily Logs':  return <DailyLogs />;
+      default:            return <Dashboard />;
+    }
+  };
+
   return (
     <div className="app-wrapper">
       <Navbar />
       <div className="app-body">
-        <Sidebar />
+        {/* Pass setActivePage so Sidebar can update the active page */}
+        <Sidebar activePage={activePage} setActivePage={setActivePage} />
         <main className="main-content">
-          <Dashboard />
+          {renderPage()}
         </main>
       </div>
     </div>
