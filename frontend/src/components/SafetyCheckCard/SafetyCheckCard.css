@@ -1,0 +1,155 @@
+.safety-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.safety-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.safety-card-area {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+.safety-card-date {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Result badges */
+.safety-result {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.safety-result.pass {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.safety-result.fail {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.safety-result.partial {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+/* Progress bar */
+.safety-progress-label {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.safety-progress-bar {
+  height: 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.safety-progress-fill {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.safety-expand-btn {
+  background: transparent;
+  border: 1.5px solid #1a1a2e;
+  color: #1a1a2e;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  width: fit-content;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.safety-expand-btn:hover {
+  background-color: #1a1a2e;
+  color: white;
+}
+
+/* Checklist items */
+.safety-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.checklist-item.checked {
+  background-color: #f0fff4;
+  color: #2e7d32;
+}
+
+.checklist-item.unchecked {
+  background-color: #fff5f5;
+  color: #c62828;
+}
+
+.checklist-icon {
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.safety-notes {
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  border-left: 3px solid #e0e0e0;
+}
+
+.safety-card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.safety-delete-btn {
+  background: transparent;
+  border: 1.5px solid #f44336;
+  color: #f44336;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.safety-delete-btn:hover {
+  background-color: #f44336;
+  color: white;
+}

@@ -1,0 +1,138 @@
+.incident-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-left: 4px solid #e0e0e0;
+}
+
+/* Left border color changes based on severity */
+.severity-border-low {
+  border-left-color: #4caf50;
+}
+
+.severity-border-medium {
+  border-left-color: #ff9800;
+}
+
+.severity-border-high {
+  border-left-color: #f44336;
+}
+
+.severity-border-critical {
+  border-left-color: #7b1fa2;
+}
+
+.incident-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.incident-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+.incident-date {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Severity badges */
+.incident-severity {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.incident-severity.low {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.incident-severity.medium {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.incident-severity.high {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.incident-severity.critical {
+  background-color: #f3e5f5;
+  color: #6a1b9a;
+}
+
+.incident-desc {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.incident-location {
+  font-size: 0.82rem;
+  color: #888;
+}
+
+.incident-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+/* Status dropdown */
+.incident-status-select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  border: 1.5px solid #e0e0e0;
+}
+
+.incident-status-select.open {
+  background-color: #ffebee;
+  color: #c62828;
+  border-color: #f44336;
+}
+
+.incident-status-select.investigating {
+  background-color: #fff3e0;
+  color: #e65100;
+  border-color: #ff9800;
+}
+
+.incident-status-select.resolved {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-color: #4caf50;
+}
+
+.incident-delete-btn {
+  background: transparent;
+  border: 1.5px solid #f44336;
+  color: #f44336;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.incident-delete-btn:hover {
+  background-color: #f44336;
+  color: white;
+}

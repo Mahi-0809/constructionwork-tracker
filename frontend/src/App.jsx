@@ -7,6 +7,8 @@ import DailyLogs from './pages/DailyLogs/DailyLogs';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
 import './App.css';
+import SafetyChecks from './pages/SafetyChecks/SafetyChecks';
+import Incidents from './pages/Incidents/Incidents';
 
 function AppContent() {
   const { user } = useAuth();
@@ -22,13 +24,15 @@ function AppContent() {
   }
 
   // Render the correct page based on activePage
-  const renderPage = () => {
-    switch (activePage) {
-      case 'Dashboard':   return <Dashboard />;
-      case 'Daily Logs':  return <DailyLogs />;
-      default:            return <Dashboard />;
-    }
-  };
+ const renderPage = () => {
+  switch (activePage) {
+    case 'Dashboard':      return <Dashboard />;
+    case 'Daily Logs':     return <DailyLogs />;
+    case 'Safety Checks':  return <SafetyChecks />;
+    case 'Incidents':      return <Incidents />;
+    default:               return <Dashboard />;
+  }
+};
 
   return (
     <div className="app-wrapper">
