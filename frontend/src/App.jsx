@@ -10,6 +10,7 @@ import './App.css';
 import SafetyChecks from './pages/SafetyChecks/SafetyChecks';
 import Incidents from './pages/Incidents/Incidents';
 import Equipment from './pages/Equipment/Equipment';
+import Tasks from './pages/Tasks/Tasks';
 
 function AppContent() {
   const { user } = useAuth();
@@ -32,6 +33,7 @@ function AppContent() {
     case 'Safety Checks':  return <SafetyChecks />;
     case 'Incidents':      return <Incidents />;
     case 'Equipment':      return <Equipment />;
+    case 'Tasks':          return <Tasks />;
     default:               return <Dashboard />;
   }
 };
