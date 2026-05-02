@@ -9,6 +9,7 @@ import Signup from './pages/Signup/Signup';
 import './App.css';
 import SafetyChecks from './pages/SafetyChecks/SafetyChecks';
 import Incidents from './pages/Incidents/Incidents';
+import Equipment from './pages/Equipment/Equipment';
 
 function AppContent() {
   const { user } = useAuth();
@@ -30,6 +31,7 @@ function AppContent() {
     case 'Daily Logs':     return <DailyLogs />;
     case 'Safety Checks':  return <SafetyChecks />;
     case 'Incidents':      return <Incidents />;
+    case 'Equipment':      return <Equipment />;
     default:               return <Dashboard />;
   }
 };
