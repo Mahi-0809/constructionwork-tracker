@@ -11,6 +11,7 @@ import SafetyChecks from './pages/SafetyChecks/SafetyChecks';
 import Incidents from './pages/Incidents/Incidents';
 import Equipment from './pages/Equipment/Equipment';
 import Tasks from './pages/Tasks/Tasks';
+import Reports from './pages/Reports/Reports';
 
 function AppContent() {
   const { user } = useAuth();
@@ -26,7 +27,7 @@ function AppContent() {
   }
 
   // Render the correct page based on activePage
- const renderPage = () => {
+const renderPage = () => {
   switch (activePage) {
     case 'Dashboard':      return <Dashboard />;
     case 'Daily Logs':     return <DailyLogs />;
@@ -34,6 +35,7 @@ function AppContent() {
     case 'Incidents':      return <Incidents />;
     case 'Equipment':      return <Equipment />;
     case 'Tasks':          return <Tasks />;
+    case 'Reports':        return <Reports />;
     default:               return <Dashboard />;
   }
 };
